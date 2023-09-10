@@ -43,7 +43,7 @@
         <br>
 
         <input type="submit" name="btnRegistrar" value="Registrar">
-        <input type="submit" name="btnLimpiar" value="Limpiar">
+        <input type="reset" name="btnLimpiar" value="Limpiar">
     </form>
 </body>
 </html>
