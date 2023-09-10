@@ -26,9 +26,9 @@
     </nav>
     <form action="Control" method="get">
         <p>Elige que cursos quieres ver:</p>
-        <input type="radio" name="Calculo_Integral" value="Cursos"> Calculo Integral
-        <input type="radio" name="Programación_avanzada" id="Cursos"> Programación Avanzada
-        <input type="radio" name="Bases_Avanzadas" id="Cursos"> Bases de datos avanzada 
+        <input type="checkbox" name="Calculo_Integral" value="Cursos"> Calculo Integral
+        <input type="checkbox" name="Programación_avanzada" id="Cursos"> Programación Avanzada
+        <input type="checkbox" name="Bases_Avanzadas" id="Cursos"> Bases de datos avanzada 
         <br>
         <br>
 
@@ -43,7 +43,7 @@
         <br>
 
         <input type="submit" name="btnRegistrar" value="Registrar">
-        <input type="submit" name="btnLimpiar" value="Limpiar">
+        <input type="reset" name="btnLimpiar" value="Limpiar">
     </form>
 </body>
 </html>
