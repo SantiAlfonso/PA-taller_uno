@@ -11,6 +11,14 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.lang.reflect.Array;
+import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.List;
+import modelo.Aspirante;
+import modelo.Curso;
+import modelo.DATA;
+import static modelo.DATA.cursos;
 
 /**
  *
@@ -36,7 +44,7 @@ public class AspiranteCTO extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AspiranteCTO</title>");            
+            out.println("<title>Servlet AspiranteCTO</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet AspiranteCTO at " + request.getContextPath() + "</h1>");
@@ -72,6 +80,39 @@ public class AspiranteCTO extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+
+        String[] materiassleccionadas = request.getParameterValues("materia");
+        String nombre = request.getParameter("txtNombre");
+        String email = request.getParameter("txtEmail");
+        String telefono = request.getParameter("txtTelefono");
+
+        Aspirante asp = new Aspirante();
+        asp.setNombre(nombre);
+        asp.setCorreo(email);
+        asp.setTelefono(telefono);
+        if (materiassleccionadas != null) {
+            List<String> materias = Arrays.asList(materiassleccionadas);
+            asp.setMaterias(materias);
+        }
+        LocalDate fecha_actual=LocalDate.now();
+        asp.setFecha(fecha_actual);
+        
+        DATA.aspirantes.add(asp);
+        
+        if(asp.getMaterias()!=null){
+            for(String materiasseleccionada : materiassleccionadas){
+                for(Curso c : cursos ){
+                    if(c.getCurso().equals(materiasseleccionada)){
+                        String nombre_curso= c.getCurso();
+                        String id_curso=Integer.toString(c.getId());
+                        String valor_curso=String.valueOf(c.getValor());
+                    }
+                }
+            }
+        }
+        
+        
+
     }
 
     /**
