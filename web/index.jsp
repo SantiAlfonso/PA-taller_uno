@@ -26,9 +26,9 @@
     </nav>
     <form action="Control" method="get">
         <p>Elige que cursos quieres ver:</p>
-        <input type="checkbox" name="Calculo_Integral" value="Cursos"> Calculo Integral
-        <input type="checkbox" name="Programación_avanzada" id="Cursos"> Programación Avanzada
-        <input type="checkbox" name="Bases_Avanzadas" id="Cursos"> Bases de datos avanzada 
+        <input type="checkbox" name="materia" value="Cursos"> Calculo Integral
+        <input type="checkbox" name="materia" id="Cursos"> Programación Avanzada
+        <input type="checkbox" name="materia" id="Cursos"> Bases de datos avanzada 
         <br>
         <br>
 

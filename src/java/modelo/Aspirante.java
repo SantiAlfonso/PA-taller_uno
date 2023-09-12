@@ -6,6 +6,7 @@ package modelo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -17,8 +18,26 @@ public class Aspirante {
     private String correo;
     private String telefono;
     public String cursos_int;
-    public LocalDate fecha;
+    private List<String> materias;
+    private LocalDate fecha;
 
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+    
+    public List<String> getMaterias() {
+        return materias;
+    }
+
+    public void setMaterias(List<String> materias) {
+        this.materias = materias;
+    }
+
+    
     public String getCorreo() {
         return correo;
     }
@@ -49,6 +68,9 @@ public class Aspirante {
         this.telefono = telefono;
         this.cursos_int = cursos_int;
         this.fecha = fecha;
+    }
+
+    public Aspirante() {
     }
 
     

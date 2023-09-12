@@ -10,11 +10,36 @@ import java.util.ArrayList;
  */
 public class Curso {
     
-    public int id;
-    public String curso;
-    public double valor;
-    public ArrayList listac=new ArrayList();  
+    private int id;
+    private String curso;
+    private double valor;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    
+    
     public Curso(int id, String curso, double valor) {
         this.id = id;
         this.curso = curso;
