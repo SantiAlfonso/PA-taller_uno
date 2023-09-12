@@ -112,7 +112,7 @@ public class AspiranteCTO extends HttpServlet {
         }
         
         
-
+        response.sendRedirect("salida.jsp");
     }
 
     /**
