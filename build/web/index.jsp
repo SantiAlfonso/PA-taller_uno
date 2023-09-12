@@ -19,18 +19,18 @@
     </header>
     <form action="Control" method="get">
         <p>Elige que cursos quieres ver:</p>
-        <input type="checkbox" name="Calculo_Integral" value="Cursos"> Calculo Integral<br>
-        <input type="checkbox" name="Programación_avanzada" id="Cursos"> Programación Avanzada<br>
-        <input type="checkbox" name="Bases_Avanzadas" id="Cursos"> Bases de datos avanzada <br>
+        <input type="checkbox" name="materia" value="Cursos"> Calculo Integral<br>
+        <input type="checkbox" name="materia" id="Cursos"> Programación Avanzada<br>
+        <input type="checkbox" name="materia" id="Cursos"> Bases de datos avanzada <br>
         <br>
         <br>
-        
-        <label>Nombre</label>
-        <input type="text" name="txtNombre"><br><br>
-        <label>Correo</label>
-        <input type="text" name="txtEmail"><br><br>
-        <label>Telefono</label>
-        <input type="text" name="txtTelefono">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="txtNombre"><br><br>
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="txtEmail"><br><br>
+        <label for="telefono">Telefono</label>
+        <input type="tel" id="telefono" name="txtTelefono" placeholder="123-456-7890">
         <br>
         <br>
 
